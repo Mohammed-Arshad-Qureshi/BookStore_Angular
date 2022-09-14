@@ -1,0 +1,45 @@
+<div>
+    <form [formGroup]="loginForm">
+        <div class="email-id">
+            <!-- <p [style.color]="isActive? 'Black':'Red'">Email Id</p> -->
+            <p>Email Id</p>
+            <mat-form-field appearance="outline" class="field-data">
+                <input class="input-size" formControlName="emailId" matInput placeholder="">
+            </mat-form-field>
+        </div>
+
+        <div class="email-id">
+            <!-- <p [style.color]="isActive? 'Black':'Red'">Password</p> -->
+            <p>Password</p>
+
+            <mat-form-field appearance="outline" class="field-data">
+                <input class="input-size" formControlName="password" matInput [type]="hide ? 'password' : 'text'" placeholder="">
+                <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </mat-form-field>
+        </div>
+
+        <div class="forget">
+            <div class="sub-pass">
+            <p>forget password ?</p>
+            </div>
+        </div>
+
+        <div class="login-container-btn">
+            <button mat-flat-button class="submit-bttn" (click)="onSubmit()">Login</button>
+        </div>
+
+        <div style="margin-top:30px">
+            <hr class="hr-text" data-content="OR">
+        </div>
+
+        <div class="other-way">
+            <div class="bttns">
+                <button mat-flat-button class="fb-bttn bttn">Facebook</button>
+            </div>
+            <div class="bttns">
+                <button  mat-flat-button class="google-bttn bttn">Google</button>
+            </div>
+        </div>
+
+    </form>
+</div>

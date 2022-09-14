@@ -1,0 +1,30 @@
+.input-size{
+    width: 100%; 
+}
+.field-data{
+    width: 100%;
+}
+.forget{
+    margin-top: -15px;
+    display: flex;
+    color: #878787;
+    width: 100%;
+    justify-content: end;
+}
+
+.submit-bttn{
+    background-color: #a12d34;
+    margin-top: 10px;
+    width: 100%;
+    color: white;
+    height: 41px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    font-size: medium;
+    cursor: pointer;
+}
+
+p{
+    margin-bottom: 0;
+}

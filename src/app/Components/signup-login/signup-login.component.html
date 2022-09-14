@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="image-logo">
+        <img src="assets/logo/logo.png" alt="logo image">
+        <h1 class="main-heading">Online Book Shopping</h1>
+    </div>
+    <div class="main-container">
+        <div class="sub-container">
+            <div class="login-header header" (click)="login()">
+                <div class="login-page">
+                    <h1 [ngClass]="{'colored':show==true}">LOGIN</h1>
+                    <div [ngClass]="{'line':show==false}"></div>
+                </div>
+            </div>
+            <div class="singup-header header" (click)="signup()">
+                <div class="signup-page">
+                    <h1 [ngClass]="{'colored':show==false}">SIGNUP</h1>
+                    <div [ngClass]="{'line':show==true}"></div>
+                </div>
+            </div>
+        </div>
+        <router-outlet></router-outlet>
+    </div>
+</div>

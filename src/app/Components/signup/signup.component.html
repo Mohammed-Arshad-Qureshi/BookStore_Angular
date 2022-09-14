@@ -1,0 +1,41 @@
+<div>
+    <form [formGroup]="signupForm">
+        <div class="email-id">
+            <p>Full Name</p>
+            <mat-form-field appearance="outline" class="field-data">
+                <input class="input-size" formControlName="fullname" matInput placeholder="">
+                <mat-error class="err">Enter Full Name</mat-error>
+            </mat-form-field>
+        </div>
+
+        <div class="email-id">
+            <p>Email Id</p>
+            <mat-form-field appearance="outline" class="field-data">
+                <input class="input-size" formControlName="email" matInput placeholder="">
+                <mat-error class="err">Enter Email Id</mat-error>
+            </mat-form-field>
+        </div>
+
+        <div class="email-id">
+            <p>Password</p>
+            <mat-form-field appearance="outline" class="field-data">
+                <input class="input-size" formControlName="password" matInput [type]="hide ? 'password' : 'text'"
+                    placeholder="">
+                <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                <mat-error class="err">Enter Password</mat-error>
+            </mat-form-field>
+        </div>
+
+        <div class="email-id">
+            <p>Mobile Number</p>
+            <mat-form-field appearance="outline" class="field-data">
+                <input class="input-size" formControlName="mobile" type="number" matInput placeholder="">
+                <mat-error class="err">Enter Mobile Number</mat-error>
+            </mat-form-field>
+        </div>
+
+        <div class="login-container-btn">
+            <button mat-flat-button class="submit-bttn" (click)="onSubmit()">Login</button>
+        </div>
+    </form>
+</div>
