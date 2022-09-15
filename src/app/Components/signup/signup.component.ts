@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder,FormGroup,Validators } from '@angular/forms';
+import { TitleStrategy } from '@angular/router';
 
 @Component({
   selector: 'app-signup',
@@ -9,6 +10,7 @@ import { FormBuilder,FormGroup,Validators } from '@angular/forms';
 export class SignupComponent implements OnInit {
   signupForm!:FormGroup;
   hide:boolean = false;
+  issubmitted = false;
   constructor(private formbuilder:FormBuilder) { }
 
   ngOnInit(): void {
@@ -20,5 +22,13 @@ export class SignupComponent implements OnInit {
     });
   }
 
-  onSubmit(){}
+  get f() { return this.signupForm.controls;}
+  onSubmit(){
+    this.issubmitted = true;
+    if(this.signupForm.invalid)
+    {
+      return;
+    }
+    console.log(this.signupForm.value);
+  }
 }

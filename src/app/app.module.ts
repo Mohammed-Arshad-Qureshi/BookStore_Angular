@@ -7,6 +7,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
 import {FormsModule} from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -14,6 +15,8 @@ import { AppComponent } from './app.component';
 import { SignupComponent } from './Components/signup/signup.component';
 import { LoginComponent } from './Components/login/login.component';
 import { SignupLoginComponent } from './Components/signup-login/signup-login.component';
+import { ForgetPasswordComponent } from './Components/forget-password/forget-password.component';
+import { ResetPasswordComponent } from './Components/reset-password/reset-password.component';
 
 
 
@@ -22,7 +25,9 @@ import { SignupLoginComponent } from './Components/signup-login/signup-login.com
     AppComponent,
     SignupComponent,
     LoginComponent,
-    SignupLoginComponent
+    SignupLoginComponent,
+    ForgetPasswordComponent,
+    ResetPasswordComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +38,8 @@ import { SignupLoginComponent } from './Components/signup-login/signup-login.com
     MatInputModule,
     MatIconModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

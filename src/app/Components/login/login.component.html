@@ -12,7 +12,7 @@
             <!-- <p [style.color]="isActive? 'Black':'Red'">Password</p> -->
             <p>Password</p>
 
-            <mat-form-field appearance="outline" class="field-data">
+            <mat-form-field appearance="outline" class="field-data pass" style="padding-bottom:0">
                 <input class="input-size" formControlName="password" matInput [type]="hide ? 'password' : 'text'" placeholder="">
                 <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
             </mat-form-field>
@@ -20,7 +20,7 @@
 
         <div class="forget">
             <div class="sub-pass">
-            <p>forget password ?</p>
+                <a routerLink="/forget"  class="anchor" >Forgot Password</a>
             </div>
         </div>
 
